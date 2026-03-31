@@ -1,0 +1,410 @@
+/* ================= TEAM SECTION ================= */
+
+.team-section{
+  padding:120px 8%;
+  background:#000;
+  text-align:center;
+}
+
+/* TITLE */
+
+.team-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 68px;
+  font-weight: 800;
+
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.1;
+
+  color: #ffffff;   /* 🔥 remove gradient */
+
+  margin-bottom: 50px;
+  position: relative;
+}
+.team-title::after {
+  content: "";
+  display: block;
+
+  width: 80px;
+  height: 4px;
+
+  margin: 14px auto 0;
+
+  background: linear-gradient(90deg, #0800ff, #ff00f2);
+  border-radius: 4px;
+}
+/* ===== TAB SECTION ===== */
+
+.team-tabs{
+  display:flex;
+  justify-content:center;
+  margin-bottom:70px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+
+.team-tabs::-webkit-scrollbar{
+  display:none;
+}
+
+/* wrapper */
+
+.tabs-wrapper{
+  position:relative;
+  display:flex;
+  gap:40px;
+  padding:8px;
+  border-radius:40px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.12);
+  backdrop-filter:blur(10px);
+  min-width:max-content;
+}
+
+/* sliding background */
+
+.tab-slider{
+  position:absolute;
+  top:6px;
+  bottom:6px;
+  border-radius:30px;
+  background:linear-gradient(120deg,#8b5cf6,#6366f1);
+  box-shadow:0 0 12px rgba(139,92,246,0.35);
+  transition:left 0.35s cubic-bezier(.4,0,.2,1),
+             width 0.35s cubic-bezier(.4,0,.2,1);
+  z-index:1;
+}
+
+/* buttons */
+
+.tab-btn{
+  position:relative;
+  background:transparent;
+  border:none;
+  color:#9ca3af;
+  font-size:16px;
+  font-weight:500;
+  cursor:pointer;
+  padding:12px 26px;
+  border-radius:30px;
+  z-index:2;
+  transition:0.3s;
+  white-space:nowrap;
+}
+
+.tab-btn:hover{ color:white; }
+.tab-btn.active{ color:white; }
+
+/* ================= TEAM GRID ================= */
+
+.team-grid{
+  display:none;
+  grid-template-columns:repeat(4,1fr);
+  justify-content:center;
+  gap:40px;
+}
+
+.team-grid.active{
+  display:grid;
+}
+
+/* ================= TEAM CARD ================= */
+
+.team-card{
+  width:100%;
+  max-width:260px;
+  margin:auto;
+  background:rgba(255,255,255,0.03);
+  padding:30px;
+  border-radius:22px;
+  position:relative;
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(8px);
+
+  /* 🔥 ANIMATION BASE */
+  opacity:0;
+  transform:translateY(60px) scale(0.9);
+  transition:
+    transform .6s cubic-bezier(.22,1,.36,1),
+    opacity .6s ease,
+    box-shadow .3s;
+}
+
+/* show animation */
+
+.team-card.show{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+
+/* stagger */
+
+.team-card:nth-child(1){transition-delay:.1s}
+.team-card:nth-child(2){transition-delay:.2s}
+.team-card:nth-child(3){transition-delay:.3s}
+.team-card:nth-child(4){transition-delay:.4s}
+.team-card:nth-child(5){transition-delay:.5s}
+.team-card:nth-child(6){transition-delay:.6s}
+
+/* border */
+
+.team-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:22px;
+  padding:1px;
+  background:linear-gradient(120deg,#8b5cf6,#a855f7);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,
+               linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  opacity:.35;
+}
+
+/* hover */
+
+.team-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 20px rgba(139,92,246,0.4);
+}
+
+/* IMAGE */
+
+.team-card img{
+  width:125px;
+  height:125px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:18px;
+  border:3px solid #a855f7;
+  transition:0.3s;
+}
+
+.team-card:hover img{
+  box-shadow:0 0 22px rgba(168,85,247,0.7);
+}
+
+/* TEXT */
+
+.team-card h3{
+  margin-bottom:6px;
+  color:white;
+  font-size:18px;
+}
+
+.team-card p{
+  color:#9ca3af;
+  font-size:14px;
+}
+
+/* LINKEDIN */
+
+.linkedin{
+  position:absolute;
+  bottom:15px;
+  right:15px;
+  background:#8b5cf6;
+  color:white;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:0.3s;
+}
+
+.linkedin:hover{
+  transform:scale(1.15);
+  box-shadow:0 0 12px rgba(139,92,246,0.6);
+}
+
+/* ================= FACULTY ================= */
+
+#faculty{
+  grid-template-columns:repeat(auto-fit, minmax(260px, max-content));
+  justify-content:center;
+  gap:40px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width:1000px){
+  .team-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+  }
+}
+
+/* MOBILE */
+@media (max-width:600px){
+
+  .team-section{
+    padding:80px 5%;
+  }
+
+  .team-title{
+    font-size:32px;
+  }
+
+  .team-tabs{
+    margin-bottom:40px;
+    overflow:visible;
+    padding:0 10px;
+  }
+
+  .tabs-wrapper{
+    width:100%;
+    display:flex;
+    gap:6px;
+    padding:6px;
+  }
+
+  .tab-btn{
+    flex:1;
+    font-size:11px;
+    padding:8px 6px;
+    text-align:center;
+  }
+
+  .team-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+  }
+
+  .team-card{
+    padding:18px;
+    border-radius:18px;
+  }
+
+  .team-card img{
+    width:80px;
+    height:80px;
+  }
+
+  .team-card h3{
+    font-size:14px;
+  }
+
+  .team-card p{
+    font-size:12px;
+  }
+
+  .linkedin{
+    width:28px;
+    height:28px;
+    font-size:12px;
+  }
+
+}
+
+/* EXTRA SMALL */
+@media (max-width:400px){
+  .team-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+
+
+.team-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.side-image {
+  position: absolute;
+  top: 40%; /* align with cards */
+  transform: translateY(-50%);
+  z-index: 0;
+  opacity: 0.9;
+}
+
+/* MOVE THEM INWARD */
+.left-img {
+  left: 8%;   /* 👈 adjust this */
+}
+
+.right-img {
+  right: 8%;  /* 👈 adjust this */
+}
+
+/* SIZE CONTROL */
+.side-image img {
+  width: 220px;
+}
+
+.side-image img {
+  filter: drop-shadow(0 0 20px rgba(138, 43, 226, 0.7));
+}
+
+
+@media (max-width: 768px) {
+
+  /* Move images near heading */
+  .side-image {
+    top: 80px;              /* align with heading */
+    transform: none;
+    opacity: 1;
+  }
+
+  /* LEFT IMAGE */
+  .left-img {
+    left: 10px;
+  }
+
+  /* RIGHT IMAGE */
+  .right-img {
+    right: 10px;
+  }
+
+  /* Resize for mobile */
+  .side-image img {
+    width: 80px;
+  }
+
+}
+
+
+
+
+/* HIDE MOBILE IMAGES ON DESKTOP */
+.mobile-side-images {
+  display: none;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+  /* SHOW MOBILE IMAGES ALWAYS */
+  .mobile-side-images {
+    display: block;
+    position: relative;
+    height: 0;
+  }
+
+  .mobile-left,
+  .mobile-right {
+    position: absolute;
+    top: -120px;   /* align near heading */
+    width: 75px;
+  }
+
+  .mobile-left {
+    left: 40px;
+  }
+
+  .mobile-right {
+    right: 40px;
+  }
+
+  /* HIDE TAB IMAGES (faculty ones) */
+  .side-image {
+    display: none !important;
+  }
+}
+
+

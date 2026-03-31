@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Science Club</title>
+  <link rel="stylesheet" href="CSS/main.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+
+  <div class="nav-container">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="assets/logo.png" alt="Science Club Logo">
+      <h2>Science<span> Club</span></h2>
+    </div>
+
+    <!-- Menu -->
+    <ul class="nav-links" id="navMenu">
+      <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+      <li><a href="#events"><i class="fas fa-calendar"></i> Events</a></li>
+      <li><a href="#team"><i class="fas fa-users"></i> Team</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+
+    <!-- Right Side Controls -->
+    <div class="nav-controls">
+      <button id="musicToggle" class="music-btn">🔊</button>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+
+  </div>
+
+</nav>
+
+<section class="hero">
+
+  <!-- VIDEO -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="assets/gifs/space.mp4" type="video/mp4">
+  </video>
+
+  <!-- OVERLAY -->
+  <div class="hero-overlay"></div>
+
+  <!-- CONTENT -->
+  <div class="hero-center">
+
+    <!-- HEADING -->
+    <h1 class="hero-heading">
+      <span class="big-text">SCIENCE</span>
+      <span class="big-text">CLUB</span>
+    </h1>
+
+    <!-- SUB -->
+    <p class="hero-sub">
+      <span class="fade-item">Explore</span>
+      <span class="fade-item">•</span>
+      <span class="fade-item">Learn</span>
+      <span class="fade-item">•</span>
+      <span class="fade-item">Innovate</span>
+    </p>
+
+    <!-- DESC -->
+    <p class="hero-desc fade-item">
+      Watch this space for exciting experiments, events, and innovation.
+    </p>
+
+    <!-- BUTTON -->
+    <button class="hero-btn-main fade-item">Explore Now</button>
+
+    <!-- FOLLOW -->
+    <div class="hero-follow fade-item">
+      <p class="follow-text">Follow us on :</p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-discord"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<body class="loading">
+<!-- ✅ OUTSIDE HERO -->
+<div class="scroll-transition"></div>
+
+<section id="about" class="about-section">
+
+  <div class="transition-layer"></div>
+
+  <section class="about-advanced reveal">
+
+    <!-- HEADING -->
+    <h1 class="hero-title">
+  About Science<span>  Club</span>
+</h1>
+
+    <div class="about-top">
+      
+      <!-- LEFT CARD -->
+      <div class="about-card reveal-card">
+        <img src="assets/logo.png" alt="Science Club Logo">
+        <h3>Science Club</h3>
+      </div>
+
+      <!-- DESCRIPTION (APPLE TEXT REVEAL) -->
+      <div class="about-description reveal-text delay-2">
+
+        <p>
+          The Science Club is a vibrant community of curious minds united by a passion for discovery and innovation.
+          It serves as a platform where students explore ideas beyond classrooms, nurture creativity, 
+          and continuous learning, the club encourages members to question boldly, and create fearlessly.
+        </p>
+
+        <p>
+          With a vision to inspire future innovators and leaders, the Science Club strives to build a culture where knowledge meets imagination and possibilities become reality. 🔬🚀✨
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-container">
+
+      <div class="stat-card reveal-card">
+        <h2 class="counter" data-target="10">0</h2>
+        <p>Events Conducted</p>
+      </div>
+
+      <div class="stat-card reveal-card">
+        <h2 class="counter" data-target="400">0</h2>
+        <p>Students Joined</p>
+      </div>
+
+      <div class="stat-card reveal-card">
+        <h2 class="counter" data-target="10">0</h2>
+        <p>Workshops</p>
+      </div>
+
+      <div class="stat-card reveal-card">
+        <h2 class="counter" data-target="10">0</h2>
+        <p>Winners🏆</p>
+      </div>
+
+    </div>
+
+  </section>
+
+</section>
+
+<section id="events" class="events-section">
+
+  <h2 class="section-title events-hidden">Our Events</h2>
+
+  <div class="events-container">
+
+    <!-- LEFT SIDE -->
+    <div class="events-list">
+
+      <!-- Event 1 -->
+      <div class="event-card events-hidden delay-1">
+        <div class="event-header">
+          <div>
+            <h3>BrainFusion: Science Battle Quiz Competition</h3>
+            <p>A Monthly science quiz competition for all skill levels.</p>
+          </div>
+          <span class="arrow"></span>
+        </div>
+
+        <div class="event-dropdown">
+          <ul>
+            <div class="event-dropdown">
+  <ul>
+
+    <li>
+      <a href="end.html"
+         target="_blank"
+         rel="noopener noreferrer">
+         🚀 January Monthly Quiz →
+      </a>
+    </li>
+
+    <li>
+      <a href="end.html"
+         target="_blank"
+         rel="noopener noreferrer">
+         🚀 February Monthly Quiz →
+      </a>
+    </li>
+
+    <li>
+      <a href="end.html"
+         target="_blank"
+         rel="noopener noreferrer">
+         🚀 March Monthly Quiz →
+      </a>
+    </li>
+
+    <li>
+      <a href="404.html"
+         target="_blank"
+         rel="noopener noreferrer">
+         🚀 April Monthly Quiz →
+      </a>
+    </li>
+
+  </ul>
+</div>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="event-card events-hidden delay-2">
+        <div class="event-header">
+          <div>
+            <h3>Monthly Coding Competition</h3>
+            <p>Monthly Coding Competition at HackerRank platform.</p>
+          </div>
+          <span class="arrow"></span>
+        </div>
+
+        <div class="event-dropdown">
+          <ul>
+            <li><a href="404.html" target="_blank">Coming soon 🔜</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="event-card events-hidden delay-3">
+        <div class="event-header">
+          <div>
+            <h3>Offline Events</h3>
+            <p>Offline workshops for hands-on learning.</p>
+          </div>
+          <span class="arrow"></span>
+        </div>
+
+        <div class="event-dropdown">
+          <ul>
+            <li><a href="404.html" target="_blank" >🌍 Green Tech Innovative Project Making Competition →</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE IMAGE -->
+    <div class="events-image events-image-hidden">
+      <img src="assets/event.png" alt="Science Event">
+    </div>
+
+  </div>
+
+</section>
+
+<section class="event-track tracker-hidden">
+
+  <!-- 🌌 BACKGROUND IMAGE -->
+  
+
+  <!-- PLANETS -->
+  
+
+  <h2 class="section-title">Event Highlights</h2>
+
+<div class="timeline">
+
+  <!-- 🚀 ROCKET -->
+  <div class="rocket-container" id="rocket">
+    <img src="assets/rocket2.png" class="timeline-rocket">
+  </div>
+
+  <!-- timeline line -->
+  <div class="timeline-progress"></div>
+  <div class="timeline-marker"></div>
+
+  <!-- ITEM 1 -->
+  <div class="timeline-item left tracker-item">
+    <div class="timeline-content">
+      <h3>National Energy Conservation Day 2025</h3>
+      <div class="timeline-date">
+        📅 Tuesday, Jan 6 | ⏰ 1:00 PM – 4:00 PM
+      </div>
+      <p class="timeline-desc">
+        Experts and mentors evaluated innovative green-tech solutions,
+        providing valuable insights and encouraging sustainable innovation
+        among participants. 🌱⚡
+      </p>
+
+      <!-- FIXED BUTTON -->
+      <a href="event2025.html" target="_blank" class="learn-btn">
+        LEARN MORE <span class="btn-icon">➜</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ITEM 2 -->
+  <div class="timeline-item right tracker-item">
+    <div class="timeline-content">
+      <h3>National Science Day 2025</h3>
+      <div class="timeline-date">
+        📅 Friday, Feb 28 | ⏰ 11:00 AM - 3:00 PM
+      </div>
+      <p class="timeline-desc">
+        The celebration highlighted innovation, scientific curiosity,
+        AI projects, and sustainable technological ideas presented
+        by enthusiastic participants. 🔬🚀
+      </p>
+
+      <!-- FIXED BUTTON -->
+      <a href="work.html" target="_blank" class="learn-btn">
+        LEARN MORE <span class="btn-icon">➜</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ITEM 3 -->
+  <div class="timeline-item left tracker-item">
+    <div class="timeline-content">
+      <h3>National Energy Conservation Day 2024</h3>
+      <div class="timeline-date">
+        📅 Tuesday, Dec 27 | ⏰ 2:00 PM - 4:00 pm
+      </div>
+      <p class="timeline-desc">
+        Experts and mentors evaluated innovative green-tech solutions,
+        providing valuable insights and encouraging sustainable innovation
+        among participants. 🌱⚡
+      </p>
+
+      <!-- ALREADY CORRECT -->
+      <a href="404.html" class="learn-btn">
+        LEARN MORE <span class="btn-icon">➜</span>
+      </a>
+    </div>
+  </div>
+
+</div>
+</section>
+<!-- ================= BECOME A MEMBER ================= -->
+<section id="membership" class="membership-section">
+
+  <h2 class="section-title">Become a Member</h2>
+
+  <div class="membership-container">
+
+    <!-- LEFT CARD -->
+    <div class="member-card left-card">
+
+      <h3>Apply for Membership</h3>
+
+      <p>
+        Join the Science Club and explore innovation, workshops,
+        coding competitions and research opportunities.
+      </p>
+
+      <ul>
+         <li>✔ Hands-on Learning</li>
+        <li>✔ Access to monthly quizzes</li>
+        <li>✔ Participate in Offline events</li>
+        <li>✔ club id card</li>
+        <li>✔ Skill Development</li>
+      </ul>
+
+      <a href="member.html" class="member-btn">
+        Apply Now
+      </a>
+
+    </div>
+
+
+    <!-- ASTRONAUT IMAGE -->
+    <div class="member-image reveal-astro">
+
+      <img src="assets/Membership.png" alt="Astronaut">
+
+    </div>
+
+
+    <!-- RIGHT CARD -->
+    <div class="member-card core-card right-card">
+
+      <h3>Become a Core Team Member</h3>
+
+      <p>
+        Take leadership roles, organize events, manage teams and
+        build impactful projects with us.
+      </p>
+
+      <ul>
+        <li>⭐ Event Management Team</li>
+        <li>⭐ Speaking and Hosting Team</li>
+        <li>⭐ Quiz Conduction Team</li>
+        <li>⭐ Design Team  & many more</li>
+
+      </ul>
+
+      <a href="coreteam.html" class="member-btn core-btn">
+        Join Core Team
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- Floating Planets -->
+
+</section>
+<!-- ================= IMAGE GALLERY ================= -->
+<section id="gallery" class="gallery-section">
+
+  <div class="gallery-header">
+  <img src="assets/gallery/gallery.png" class="astro left">
+  <h2 class="gallery-title">Image Gallery</h2>
+  <img src="assets/gallery/gallery1.png" class="astro right">
+</div>
+
+  <div class="gallery-wrapper">
+    <div class="gallery-track">
+
+      <div class="gallery-item reveal"><img src="assets/gallery/1.jpg"></div>
+      <div class="gallery-item reveal"><img src="assets/gallery/2.jpg"></div>
+      <div class="gallery-item reveal"><img src="assets/gallery/3.jpg"></div>
+      <div class="gallery-item reveal"><img src="assets/gallery/4.jpg"></div>
+      <div class="gallery-item reveal"><img src="assets/gallery/5.jpg"></div>
+      <div class="gallery-item reveal"><img src="assets/gallery/6.jpg"></div>
+      <div class="gallery-item reveal"><img src="assets/gallery/7.jpg"></div>
+      <div class="gallery-item reveal"><img src="assets/gallery/8.jpg"></div>
+      <div class="gallery-item reveal"><img src="assets/gallery/9.jpg"></div>
+      <div class="gallery-item reveal"><img src="assets/gallery/10.jpg"></div>
+
+    </div>
+  </div>
+
+  <div class="gallery-controls">
+    <button id="prevBtn"><span>←</span></button>
+    <button id="nextBtn"><span>→</span></button>
+  </div>
+
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox">
+  <span class="close-lightbox">&times;</span>
+  <img class="lightbox-img" />
+</div>
+
+
+
+<section class="team-section" id="team">
+
+  
+  <h2 class="team-title">Our Team</h2>
+  <div class="mobile-side-images">
+  <img src="assets/Team/astro.png" class="mobile-left">
+  <img src="assets/Team/astro1.png" class="mobile-right">
+</div>
+
+<div class="team-tabs">
+
+<div class="tabs-wrapper">
+
+<div class="tab-slider"></div>
+
+<button class="tab-btn active">Faculty Coordinators</button>
+<button class="tab-btn">Student Coordinators</button>
+<button class="tab-btn">Committee Leads</button>
+
+</div>
+
+</div>
+
+  <!-- FACULTY -->
+  <div class="team-grid active" id="faculty">
+    <div class="side-image left-img" id="facultyImages">
+    <img src="assets/Team/astro1.png" alt="left design">
+  </div>
+
+  <!-- RIGHT IMAGE -->
+  <div class="side-image right-img" id="facultyImages2">
+    <img src="assets/Team/astro.png" alt="right design">
+  </div>
+
+<div class="team-card">
+  <img src="assets/Team/faculty/mithumam.png" alt="">
+  <h3>Dr. Mithu Dey Sarkar</h3>
+  <p>Faculty Coordinator</p>
+</div>
+
+<div class="team-card">
+  <img src="assets/Team/faculty/ranjitamam.png" alt="">
+  <h3>Dr. Ranjita Sinha</h3>
+  <p>Faculty Coordinator</p>
+</div>
+
+</div>
+
+  <!-- STUDENTS (8 BOXES) -->
+  <div class="team-grid" id="students">
+    <div class="team-card president">
+      
+      <img src="assets/Team/student/swastika.jpg" alt="">
+      <h3>Swastika Banerjee</h3>
+      <p>Hosting lead</p>
+      <a href="#" target="_blank" class="linkedin">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+
+    <!-- Repeat for total 8 -->
+    <div class="team-card"><img src="assets/Team/student/prithwish.png"><h3>Prithwish Chatterjee</h3><p>Event lead</p><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+    <div class="team-card"><img src="assets/Team/student/pratyay.png"><h3>Pratyay Chatterjee</h3><p>Design Lead</p><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+    <div class="team-card"><img src="assets/Team/student/sohom.jpg"><h3>Sohom Dutta</h3><p>Design team</p><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+    <div class="team-card"><img src="assets/Team/student/indu.jpg"><h3>Induprama Mondal</h3><p>Hosting team</p><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+    <div class="team-card"><img src="assets/Team/student/pritom.jpg"><h3>Pritom Nandi</h3><p>Marketing Team</p><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+    
+  </div>
+
+  <!-- COMMITTEE (6 BOXES) -->
+  <div class="team-grid" id="committee">
+    <div class="team-card"><img src="assets/Team/clublead/priyanshu.png"><h3>Priyanshu Mukherjee</h3><p>Club President</p><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+    <div class="team-card"><img src="assets/Team/clublead/suchetonadidi.jpg"><h3>Suchetana Chakraborty</h3><p>Club Lead</p><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+    <div class="team-card"><img src="assets/Team/clublead/akashda.jpg"><h3>Akash Sutradhar</h3><p>Club Lead</p><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+    <div class="team-card"><img src="assets/Team/clublead/Swastikda.png"><h3>Swastik Mukherjee</h3><p>Media Lead</p><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+   
+
+<!-- Floating Planets for Team -->
+
+</section>
+
+<!-- ================= FAQ SECTION ================= -->
+<section class="faq-section" id="faq">
+
+  <!-- TOP SECTION (ASTRONAUT + TITLE CENTERED) -->
+  <div class="faq-top">
+
+    <!-- LEFT ASTRONAUT -->
+    <img src="assets/FAQimage1.png" class="faq-astro" alt="astronaut">
+
+    <!-- CENTER TEXT -->
+    <div class="faq-center">
+      <h2 class="faq-title faq-reveal">FAQs</h2>
+      <p class="faq-subtitle faq-reveal">
+        Got questions? We've got answers. Check out our frequently asked questions below.
+      </p>
+    </div>
+
+    <!-- RIGHT ASTRONAUT -->
+    <img src="assets/FAQimage2.png" class="faq-astro" alt="astronaut">
+
+  </div>
+
+  <!-- floating planets (DESKTOP ONLY) -->
+ 
+  <!-- FAQ CONTENT -->
+  <div class="faq-container">
+
+    <!-- FAQ 1 -->
+    <div class="faq-item faq-reveal">
+      <div class="faq-question" onclick="toggleFAQ(this)">
+        <h3>1. What is the Science Club?</h3>
+        <span class="faq-arrow"></span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          The Science Club is a community of students passionate about science,
+          technology, innovation, and learning beyond the classroom.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="faq-item faq-reveal">
+      <div class="faq-question" onclick="toggleFAQ(this)">
+        <h3>2. How can I participate in Science Club events?</h3>
+        <span class="faq-arrow"></span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Students can participate by registering through the event announcement
+          shared on the website or official club platforms.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="faq-item faq-reveal">
+      <div class="faq-question" onclick="toggleFAQ(this)">
+        <h3>3. How can I become a member of the Science Club?</h3>
+        <span class="faq-arrow"></span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          You can join by registering during recruitment announcements or by
+          contacting the Science Club team through the website or official
+          platforms.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="faq-item faq-reveal">
+      <div class="faq-question" onclick="toggleFAQ(this)">
+        <h3>4. Do participants receive certificates for events?</h3>
+        <span class="faq-arrow"></span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Yes, participants and winners will receive certificates and recognition
+          depending on the event.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- ================= FOOTER ================= -->
+
+<section class="footer-section">
+
+  
+
+  <div class="footer-heading">
+    <h1>Science<span>Club</span></h1>
+  </div>
+
+  <div class="footer-container">
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h3>Get In Touch</h3>
+
+      <div class="footer-item">
+        <i class="fas fa-envelope"></i>
+        <span>aecscienceclub1@gmail.com</span>
+      </div>
+
+      <div class="footer-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Asansol Engineering College</span>
+      </div>
+
+      <div class="footer-item">
+        <i class="fas fa-phone"></i>
+        <span>+91 98765 43210</span>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <a href="#about">About</a>
+      <a href="#events">Events</a>
+      <a href="#faq">FAQ</a>
+      <a href="#team">Our Team</a>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-col">
+      <h3>Follow Us</h3>
+
+      <div class="social-box">
+        <a href="#"><i class="fas fa-discord"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Science Club. All Rights Reserved.
+  </div>
+
+</section>
+
+<!-- ================= AI BUTTON ================= -->
+<!-- ================= AI BUTTON ================= -->
+<div id="aiButton">
+  <img src="assets/ai.png" alt="AI Bot">
+</div>
+
+<!-- ================= AI CHAT BOX ================= -->
+<div id="aiBox">
+
+  <!-- HEADER -->
+  <div class="ai-header">
+  <span>🤖 Science Assistant</span>
+
+  <div class="ai-actions">
+    <button id="clearChat">🗑</button>
+    <span id="closeAI">✖</span>
+  </div>
+</div>
+
+  <!-- CHAT MESSAGES -->
+  <div class="ai-messages" id="aiMessages">
+    <div class="bot-msg">👋 Hi! Ask me anything about the Science Club.</div>
+    <div class="quick-questions">
+  <button onclick="quickAsk('events')">Events 🚀</button>
+  <button onclick="quickAsk('member')">Join Club 👨‍🔬</button>
+  <button onclick="quickAsk('workshop')">Workshops 🤖</button>
+  <button onclick="quickAsk('contact')">Contact 📩</button>
+</div>
+  </div>
+
+  <!-- INPUT AREA -->
+  <div class="ai-input-area">
+    <input type="text" id="aiInput" placeholder="Type your message...">
+    <button id="sendBtn">➤</button>
+  </div>
+
+</div>
+
+
+<!-- ================= BACKGROUND MUSIC ================= -->
+<audio id="bgMusic" loop>
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+<script>
+console.log("Script Loaded ✅");
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const hiddenElements = document.querySelectorAll(".hidden");
+  console.log("Hidden elements:", hiddenElements.length);
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  hiddenElements.forEach(el => {
+    revealObserver.observe(el);
+  });
+
+});
+</script>
+
+
+
+
+</body>
+</html>
+
+<script src="script.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>

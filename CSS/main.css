@@ -1,0 +1,35 @@
+@import url("about.css");
+@import url("navbar.css");
+@import url("hero.css");
+@import url("event.css");
+@import url("team.css");
+@import url("event-track.css");
+@import url("gallery.css");
+@import url("footer.css");
+@import url("faq.css");
+@import url("ai.css");
+@import url("membership.css");
+
+
+/* ===== SCROLLBAR ===== */
+
+/* Whole scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Background (track) → BLACK */
+::-webkit-scrollbar-track {
+  background: #000;   /* black */
+}
+
+/* Moving bar (thumb) → VIOLET */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7507ea, #8e09e1);
+  border-radius: 10px;
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #a855f7, #c084fc);
+}

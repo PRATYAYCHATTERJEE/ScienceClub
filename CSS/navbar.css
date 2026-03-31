@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+
+body {
+  overflow-x: hidden;
+  color: white;
+}
+
+/* ================= FLOATING GLASS NAVBAR ================= */
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  border-radius: 20px;
+
+  /* Transparent Glass */
+  background: rgba(20, 0, 40, 0.25);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(235, 233, 233, 0.186);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.logo h2 {
+  color: white;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #ffffff;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  margin-left: auto;     /* pushes menu away from logo */
+  margin-right: 60px;    /* creates space before music button */
+}
+
+.nav-links li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00ffe1;
+  transform: translateY(-2px);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.music-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 123, 0, 0.4);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.music-btn:hover {
+  background: #1436f52f;
+  color: black;
+  box-shadow: 0 0 15px #ffffff;
+  transform: translateY(-2px);
+}
+/* ================= MOBILE MENU (<=900px) ================= */
+@media (max-width: 900px) {
+
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 15px;
+
+    background: rgba(20, 0, 40, 0.95);
+    backdrop-filter: blur(12px);
+
+    flex-direction: column;
+    width: 200px;
+    padding: 16px;
+    border-radius: 12px;
+
+    display: none;
+    gap: 14px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+/* ================= MOBILE NAVBAR (<=768px) ================= */
+@media (max-width: 768px) {
+
+  /* 🔥 FIXED FLOATING NAVBAR (BALANCED POSITION) */
+  .navbar {
+    position: fixed;
+    top: 10px;                /* 🔥 FIXED (was 30px too much) */
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 92%;
+    max-width: 620px;
+
+    margin: 0;
+    padding: 0;
+
+    z-index: 999;
+  }
+
+  /* 🔥 THICKNESS FIX */
+  .nav-container {
+    padding: 12px 12px;        /* 🔥 reduced height */
+    border-radius: 12px;
+  }
+
+  /* LOGO */
+  .logo img {
+    width: 30px;              /* slightly smaller */
+  }
+
+  .logo h2 {
+    font-size: 18px;
+  }
+
+  /* CONTROLS */
+  .nav-controls {
+    gap: 8px;
+  }
+
+  .music-btn {
+    width: 37px;
+    height: 37px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+
+  .hamburger {
+    font-size: 22px;
+  }
+
+  /* NAV LINKS (hidden by default) */
+  .nav-links {
+    display: none;
+  }
+
+  /* REMOVE EXTRA GAP */
+  body {
+    padding-top: 0;
+  }
+}
+
+/* Smooth premium animation */
+.navbar {
+  transition: 
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.6s ease;
+}
+
+/* Hide (scroll down) */
+.navbar.hide {
+  transform: translate(-50%, -150%);
+  opacity: 0;
+}
+
+/* Show (scroll up) */
+.navbar.show {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}

@@ -1,0 +1,282 @@
+/* ================= SPACE FAQ SECTION ================= */
+
+.faq-section{
+  padding:120px 8%;
+  background:#000;
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+}
+
+/* star background */
+
+.faq-section::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-image:radial-gradient(white 1px,transparent 1px);
+  background-size:4px 4px;
+  opacity:0.05;
+  top:0;
+  left:0;
+  z-index:0;
+}
+
+/* ================= TITLE ================= */
+
+.faq-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.1;
+
+  color: #ffffff;   /* 🔥 remove gradient text */
+
+  margin-bottom: 40px;
+  position: relative;
+}
+.faq-title::after {
+  content: "";
+  display: block;
+
+  width: 80px;
+  height: 4px;
+
+  margin: 14px auto 0;
+
+  background: linear-gradient(90deg, #0800ff, #ff00f2);
+  border-radius: 4px;
+}
+
+.faq-subtitle{
+  color:#94a3b8;
+  margin-bottom:70px;
+  position:relative;
+  z-index:1;
+  font-size:16px;
+}
+
+/* ================= FAQ TOP (DESKTOP STRUCTURE) ================= */
+
+.faq-top{
+  position:relative;
+  margin-bottom:40px;
+}
+
+.faq-center{
+  max-width:700px;
+  margin:auto;
+}
+
+/* astronauts desktop */
+
+.faq-astro{
+  position:absolute;
+  width:180px;
+  top:0;
+  z-index:0;
+}
+
+.faq-astro:first-child{
+  left:5%;
+}
+
+.faq-astro:last-child{
+  right:5%;
+}
+
+/* ================= CONTAINER ================= */
+
+.faq-container{
+  max-width:720px;
+  margin:auto;
+  position:relative;
+  z-index:1;
+}
+
+/* ================= FAQ CARD ================= */
+
+.faq-item{
+  background:#0b0b0f;
+  border-radius:20px;
+  margin-bottom:24px;
+  position:relative;
+  overflow:hidden;
+  transition:0.35s ease;
+}
+
+/* animated border */
+
+.faq-item::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding:1px;
+  border-radius:20px;
+  background:linear-gradient(90deg,#8b5cf6,#6366f1,#0ea5e9,#8b5cf6);
+  background-size:300% 300%;
+  animation:borderMove 6s linear infinite;
+
+  -webkit-mask:linear-gradient(#000 0 0) content-box,
+               linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+}
+
+@keyframes borderMove{
+  0%{background-position:0% 50%;}
+  100%{background-position:200% 50%;}
+}
+
+/* hover */
+
+.faq-item:hover{
+  transform:translateY(-4px);
+  box-shadow:
+  0 0 25px rgba(139,92,246,0.25),
+  0 0 40px rgba(99,102,241,0.15);
+}
+
+/* ================= QUESTION ================= */
+
+.faq-question{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:24px;
+  cursor:pointer;
+}
+
+.faq-question h3{
+  font-size:20px;
+  color:#e5e7eb;
+}
+
+.faq-item.active .faq-question h3{
+  color:#fff;
+}
+
+/* ================= ARROW ================= */
+
+.faq-arrow{
+  width:12px;
+  height:12px;
+  border-right:2px solid #8b5cf6;
+  border-bottom:2px solid #8b5cf6;
+  transform:rotate(45deg);
+  transition:0.3s;
+}
+
+.faq-item.active .faq-arrow{
+  transform:rotate(-135deg);
+}
+
+/* ================= ANSWER ================= */
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s ease;
+  padding:0 24px;
+}
+
+.faq-answer p{
+  padding:18px 0 24px;
+  color:#94a3b8;
+}
+
+.faq-question{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:24px;
+  cursor:pointer;
+  width:100%;
+}
+
+/* ================= PLANETS ================= */
+
+.faq-planet{
+  position:absolute;
+  opacity:0.35;
+  z-index:0;
+}
+
+.planet1{ left:5%; top:30%; }
+.planet2{ right:10%; top:15%; }
+
+/* ================= MOBILE FIX ================= */
+
+@media (max-width:600px){
+
+  .faq-section{
+    padding:80px 5%;
+  }
+
+  .faq-title{
+    font-size:38px;
+  }
+
+  .faq-subtitle{
+    font-size:13px;
+    margin-bottom:30px;
+  }
+
+  /* hide planets */
+  .faq-planet{
+    display:none !important;
+  }
+
+  /* MOBILE LAYOUT */
+  .faq-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+  }
+
+  .faq-astro{
+    position:static !important;
+    width:100px;
+  }
+
+  .faq-center{
+    flex:1;
+    text-align:center;
+  }
+
+}
+/* ================= DESKTOP SIDE ALIGN FIX ================= */
+
+@media (min-width:768px){
+
+  .faq-top{
+    position:static; /* remove top layout effect */
+    margin-bottom:0;
+  }
+
+  /* move astronauts beside FAQ container */
+  .faq-astro{
+    position:absolute;
+    top:60%; /* 🔥 main control (adjust if needed) */
+    transform:translateY(-50%);
+    width:190px;
+    z-index:0;
+  }
+
+  .faq-astro:first-child{
+    left:2%;
+  }
+
+  .faq-astro:last-child{
+    right:2%;
+  }
+
+}
+
+
+

@@ -1,0 +1,285 @@
+/* ================= EVENTS SECTION ================= */
+
+.events-section {
+  padding: 100px 10%;
+  background: #000;
+  color: white;
+}
+
+/* SECTION TITLE */
+/* SECTION TITLE (MATCH ABOUT STYLE) */
+.section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.1;
+
+  color: #ffffff;
+
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+
+  width: 80px;
+  height: 4px;
+
+  margin: 14px auto 0;
+
+  background: linear-gradient(90deg, #0800ff, #ff00f2);
+  border-radius: 4px;
+}
+
+/* CONTAINER */
+.events-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* LEFT SIDE */
+.events-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* ================= EVENT CARD ================= */
+
+.event-card {
+  position: relative;
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+/* Subtle animated glowing border (no color tint) */
+.event-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 30px;
+  padding: 2px;
+  background: linear-gradient(90deg, #ff00ff, #00b4ff, #ff00ff);
+  background-size: 200% 200%;
+  animation: borderMove 4s linear infinite;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes borderMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Hover effect */
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(255,0,255,0.3);
+}
+
+/* HEADER */
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-header h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.event-header p {
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+/* ARROW */
+.arrow {
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+  transition: 0.3s ease;
+}
+
+.event-card.active .arrow {
+  transform: rotate(-135deg);
+}
+
+/* ================= EVENT CARD ================= */
+
+.event-card {
+  position: relative;
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+/* ✨ KEEP YOUR ORIGINAL HOVER COLOR EFFECT */
+.event-card:hover {
+  background: linear-gradient(135deg, rgba(255,0,255,0.15), rgba(0,140,255,0.15));
+  box-shadow: 0 0 20px rgba(255,0,255,0.3);
+  transform: translateY(-6px);
+}
+
+/* 🔥 Animated Border (WITHOUT changing card color) */
+.event-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 30px;
+  padding: 2px;
+  background: linear-gradient(90deg, #ff00ff, #00b4ff, #ff00ff);
+  background-size: 200% 200%;
+  animation: borderMove 4s linear infinite;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes borderMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.event-dropdown {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease;
+}
+
+.event-dropdown ul {
+  overflow: hidden;
+  padding-top: 15px;
+}
+
+.event-card.active .event-dropdown {
+  grid-template-rows: 1fr;
+}
+
+/* ================= RIGHT IMAGE ================= */
+
+.events-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.events-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0,140,255,0.3);
+  transition: 0.5s ease;
+}
+
+.events-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= SCROLL ANIMATION ================= */
+
+.events-hidden {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.events-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
+
+/* IMAGE SCROLL ANIMATION */
+.events-image-hidden {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: all 1s ease;
+}
+
+.events-image-show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .events-container {
+    flex-direction: column;
+  }
+}
+
+
+
+/* ================= DROPDOWN ITEM SHAPE ================= */
+
+.event-dropdown ul {
+  list-style: none;
+  padding: 15px 0 0;
+  margin: 0;
+}
+
+.event-dropdown li {
+  margin-bottom: 12px;
+}
+
+.event-dropdown li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 18px;
+  width: fit-content;
+
+  border-radius: 50px; /* pill shape */
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 14px;
+
+  backdrop-filter: blur(8px);
+  transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.event-dropdown li a:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255,0,255,0.2),
+    rgba(0,140,255,0.2)
+  );
+  border-color: rgba(255,0,255,0.4);
+  color: white;
+  transform: translateX(8px);
+}

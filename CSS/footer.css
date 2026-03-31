@@ -1,0 +1,132 @@
+/* ================= SPACE FOOTER ================= */
+
+.footer-section{
+  padding:120px 8% 40px;
+  background:#000;
+  position:relative;
+  overflow:hidden;
+
+  /* dotted space stars */
+  background-image:
+  radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px);
+  background-size:14px 14px;
+}
+
+/* title */
+
+.footer-heading{
+  text-align:center;
+  margin-bottom:80px;
+}
+
+.footer-heading h1{
+  font-size:80px;
+  font-weight:900;
+  color:white;
+}
+
+.footer-heading span{
+  color:#7c5cff;
+  
+}
+
+/* grid */
+
+.footer-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:60px;
+}
+
+/* column */
+
+.footer-col h3{
+  color:#7c5cff;
+  margin-bottom:25px;
+  border-bottom:2px solid #7c5cff;
+  display:inline-block;
+  padding-bottom:5px;
+}
+
+/* contact */
+
+.footer-item{
+  display:flex;
+  align-items:center;
+  margin-bottom:18px;
+  color:#bbb;
+}
+
+.footer-item i{
+  margin-right:15px;
+  color:#7c5cff;
+}
+
+/* links */
+
+.footer-col a{
+  display:block;
+  margin-bottom:15px;
+  color:#bbb;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.footer-col a:hover{
+  color:#7c5cff;
+  transform:translateX(6px);
+}
+
+/* social */
+
+.social-box{
+  display:flex;
+  gap:15px;
+}
+
+.social-box a{
+  width:45px;
+  height:45px;
+  border:1px solid #7c5cff;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#7c5cff;
+  transition:.3s;
+}
+
+.social-box a:hover{
+  background:#7c5cff;
+  color:black;
+  transform:translateY(-6px);
+  box-shadow:0 0 20px #7c5cff;
+}
+
+/* bottom */
+
+.footer-bottom{
+  text-align:center;
+  margin-top:80px;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  color:#888;
+}
+
+
+@media (max-width: 600px) {
+
+  .footer-heading h1 {
+    font-size: 62px;      /* 🔥 reduce size */
+    line-height: 1.2;
+
+    display: flex;
+    flex-direction: column;   /* 🔥 force next line */
+    align-items: center;
+  }
+
+  .footer-heading span {
+    display: block;   /* 🔥 "Club" goes to next line */
+  }
+
+}

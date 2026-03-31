@@ -1,0 +1,261 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:black;
+font-family:'Segoe UI', sans-serif;
+overflow-x:hidden;
+color:white;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+position:relative;
+height:100vh;
+overflow:hidden;
+}
+
+/* VIDEO */
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: right 30%;  /* 👈 FIXED */
+
+  z-index: -2;
+
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* OVERLAY */
+
+.hero-overlay{
+position:absolute;
+width:100%;
+height:100%;
+
+background:linear-gradient(
+to right,
+rgba(0,0,0,0.85) 0%,
+rgba(0,0,0,0.55) 40%,
+rgba(0,0,0,0.15) 70%
+);
+
+top:0;
+left:0;
+z-index:-1;
+}
+
+/* ================= CONTENT ================= */
+
+.hero-center{
+position:absolute;
+top:55%;
+left:10%;
+transform:translateY(-50%);
+text-align:left;
+max-width:600px;
+
+transition:transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* ================= HEADING ================= */
+
+.hero-heading{
+display:flex;
+flex-direction:column;
+line-height:0.85;
+}
+
+.big-text{
+font-size:clamp(60px, 9vw, 110px);
+font-weight:900;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#d4e1e7;
+
+text-shadow:0 3px 8px rgba(0,0,0,0.6);
+}
+
+/* ================= SUB ================= */
+
+.hero-sub{
+margin-top:18px;
+font-size:18px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+color:#ffffff;
+font-weight:600;
+
+text-shadow:0 0 6px rgba(0,0,0,0.6);
+}
+
+/* ================= DESCRIPTION ================= */
+
+.hero-desc{
+margin-top:10px;
+font-size:14px;
+color:rgba(255,255,255,0.9);
+line-height:1.6;
+max-width:500px;
+
+text-shadow:0 0 8px rgba(0,0,0,0.7);
+}
+
+/* ================= BUTTON ================= */
+
+.hero-btn-main{
+margin-top:22px;
+padding:12px 28px;
+border:none;
+border-radius:30px;
+
+background:linear-gradient(135deg,#90a4ae,#b0bec5);
+color:#000;
+
+font-weight:700;
+font-size:14px;
+
+cursor:pointer;
+transition:0.3s;
+
+box-shadow:
+0 6px 20px rgba(0,0,0,0.4),
+0 0 10px rgba(176,190,197,0.3);
+}
+
+.hero-btn-main:hover{
+transform:translateY(-4px) scale(1.03);
+}
+
+/* ================= FOLLOW ================= */
+
+.hero-follow{
+margin-top:30px;
+}
+
+.follow-text{
+font-size:14px;
+color:#ffffff;
+margin-bottom:12px;
+letter-spacing:2px;
+font-weight:600;
+}
+
+/* ================= SOCIAL ================= */
+
+.social-icons{
+display:flex;
+gap:15px;
+}
+
+.social-icons a{
+width:45px;
+height:45px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:12px;
+
+background:rgba(0,0,0,0.4);
+color:#ffffff;
+font-size:18px;
+
+transition:0.3s;
+
+border:1px solid rgba(255,255,255,0.2);
+}
+
+.social-icons a:hover{
+background:#90a4ae;
+color:#000;
+
+transform:translateY(-5px) scale(1.1);
+}
+
+/* ================= FADE ITEMS ================= */
+
+.fade-item{
+opacity:1;
+transform:translateY(0);
+transition:all 0.4s ease;
+}
+
+/* STAGGER FADE (WORKING) */
+
+.hero.fade-text .fade-item{
+opacity:0;
+transform:translateY(-25px);
+}
+
+/* ================= VIDEO FADE ================= */
+
+.hero.fade-video .hero-video{
+opacity:0;
+transform:scale(1.1);
+}
+
+/* ================= BLACK SCREEN ================= */
+
+.scroll-transition{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+opacity:0;
+pointer-events:none;
+transition:opacity 0.5s ease;
+z-index:999;
+}
+
+.scroll-transition.active{
+opacity:1;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.hero-center{
+left:50%;
+top:55%;
+transform:translate(-50%,-50%);
+text-align:center;
+padding:0 20px;
+}
+
+.big-text{
+font-size:clamp(42px, 11vw, 58px);
+letter-spacing:1.5px;
+}
+
+.hero-sub{
+justify-content:center;
+font-size:15px;
+}
+
+.hero-desc{
+text-align:center;
+max-width:320px;
+margin:auto;
+}
+
+.social-icons{
+justify-content:center;
+}
+
+}
