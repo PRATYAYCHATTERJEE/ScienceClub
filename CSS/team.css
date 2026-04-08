@@ -1,40 +1,44 @@
-/* ================= TEAM SECTION ================= */
+/* =========================================================
+   ================== TEAM SECTION ==========================
+   ========================================================= */
 
 .team-section{
   padding:120px 8%;
   background:#000;
   text-align:center;
+  position: relative;
+  overflow: hidden;
 }
 
-/* TITLE */
+
+/* ================== TITLE ================== */
 
 .team-title {
   font-family: 'Outfit', sans-serif;
   font-size: 68px;
   font-weight: 800;
-
   text-align: center;
   letter-spacing: 1px;
   line-height: 1.1;
-
-  color: #ffffff;   /* 🔥 remove gradient */
-
+  color: #ffffff;
   margin-bottom: 50px;
   position: relative;
 }
+
 .team-title::after {
   content: "";
   display: block;
-
   width: 80px;
   height: 4px;
-
   margin: 14px auto 0;
-
   background: linear-gradient(90deg, #0800ff, #ff00f2);
   border-radius: 4px;
 }
-/* ===== TAB SECTION ===== */
+
+
+/* =========================================================
+   ================== TAB SECTION ===========================
+   ========================================================= */
 
 .team-tabs{
   display:flex;
@@ -48,7 +52,7 @@
   display:none;
 }
 
-/* wrapper */
+/* Tabs Wrapper */
 
 .tabs-wrapper{
   position:relative;
@@ -62,7 +66,7 @@
   min-width:max-content;
 }
 
-/* sliding background */
+/* Sliding Background */
 
 .tab-slider{
   position:absolute;
@@ -76,7 +80,7 @@
   z-index:1;
 }
 
-/* buttons */
+/* Tab Buttons */
 
 .tab-btn{
   position:relative;
@@ -96,7 +100,10 @@
 .tab-btn:hover{ color:white; }
 .tab-btn.active{ color:white; }
 
-/* ================= TEAM GRID ================= */
+
+/* =========================================================
+   ================== TEAM GRID =============================
+   ========================================================= */
 
 .team-grid{
   display:none;
@@ -109,7 +116,10 @@
   display:grid;
 }
 
-/* ================= TEAM CARD ================= */
+
+/* =========================================================
+   ================== TEAM CARD =============================
+   ========================================================= */
 
 .team-card{
   width:100%;
@@ -122,7 +132,7 @@
   border:1px solid rgba(255,255,255,0.08);
   backdrop-filter:blur(8px);
 
-  /* 🔥 ANIMATION BASE */
+  /* Animation Base */
   opacity:0;
   transform:translateY(60px) scale(0.9);
   transition:
@@ -131,14 +141,14 @@
     box-shadow .3s;
 }
 
-/* show animation */
+/* Show Animation */
 
 .team-card.show{
   opacity:1;
   transform:translateY(0) scale(1);
 }
 
-/* stagger */
+/* Stagger Animation */
 
 .team-card:nth-child(1){transition-delay:.1s}
 .team-card:nth-child(2){transition-delay:.2s}
@@ -147,7 +157,7 @@
 .team-card:nth-child(5){transition-delay:.5s}
 .team-card:nth-child(6){transition-delay:.6s}
 
-/* border */
+/* Border Effect */
 
 .team-card::before{
   content:"";
@@ -163,14 +173,15 @@
   opacity:.35;
 }
 
-/* hover */
+/* Hover */
 
 .team-card:hover{
   transform:translateY(-8px);
   box-shadow:0 0 20px rgba(139,92,246,0.4);
 }
 
-/* IMAGE */
+
+/* ================== IMAGE ================== */
 
 .team-card img{
   width:125px;
@@ -186,7 +197,8 @@
   box-shadow:0 0 22px rgba(168,85,247,0.7);
 }
 
-/* TEXT */
+
+/* ================== TEXT ================== */
 
 .team-card h3{
   margin-bottom:6px;
@@ -199,7 +211,8 @@
   font-size:14px;
 }
 
-/* LINKEDIN */
+
+/* ================== LINKEDIN ================== */
 
 .linkedin{
   position:absolute;
@@ -221,7 +234,10 @@
   box-shadow:0 0 12px rgba(139,92,246,0.6);
 }
 
-/* ================= FACULTY ================= */
+
+/* =========================================================
+   ================== FACULTY GRID ==========================
+   ========================================================= */
 
 #faculty{
   grid-template-columns:repeat(auto-fit, minmax(260px, max-content));
@@ -229,9 +245,13 @@
   gap:40px;
 }
 
-/* ================= RESPONSIVE ================= */
 
-/* TABLET */
+/* =========================================================
+   ================== RESPONSIVE ============================
+   ========================================================= */
+
+/* ===== TABLET ===== */
+
 @media (max-width:1000px){
   .team-grid{
     grid-template-columns:repeat(2,1fr);
@@ -239,7 +259,9 @@
   }
 }
 
-/* MOBILE */
+
+/* ===== MOBILE ===== */
+
 @media (max-width:600px){
 
   .team-section{
@@ -301,7 +323,9 @@
 
 }
 
-/* EXTRA SMALL */
+
+/* ===== EXTRA SMALL ===== */
+
 @media (max-width:400px){
   .team-grid{
     grid-template-columns:1fr;
@@ -309,59 +333,44 @@
 }
 
 
-
-.team-section {
-  position: relative;
-  overflow: hidden;
-}
+/* =========================================================
+   ================== SIDE IMAGES ===========================
+   ========================================================= */
 
 .side-image {
   position: absolute;
-  top: 40%; /* align with cards */
+  top: 40%;
   transform: translateY(-50%);
   z-index: 0;
   opacity: 0.9;
 }
 
-/* MOVE THEM INWARD */
-.left-img {
-  left: 8%;   /* 👈 adjust this */
-}
+/* Position */
 
-.right-img {
-  right: 8%;  /* 👈 adjust this */
-}
+.left-img { left: 8%; }
+.right-img { right: 8%; }
 
-/* SIZE CONTROL */
-.side-image img {
-  width: 220px;
-}
+/* Size */
 
 .side-image img {
+  width: 590px;
   filter: drop-shadow(0 0 20px rgba(138, 43, 226, 0.7));
 }
 
 
+/* ===== TABLET / MOBILE ADJUSTMENT ===== */
+
 @media (max-width: 768px) {
 
-  /* Move images near heading */
   .side-image {
-    top: 80px;              /* align with heading */
+    top: 80px;
     transform: none;
     opacity: 1;
   }
 
-  /* LEFT IMAGE */
-  .left-img {
-    left: 10px;
-  }
+  .left-img { left: 10px; }
+  .right-img { right: 10px; }
 
-  /* RIGHT IMAGE */
-  .right-img {
-    right: 10px;
-  }
-
-  /* Resize for mobile */
   .side-image img {
     width: 80px;
   }
@@ -369,17 +378,21 @@
 }
 
 
+/* =========================================================
+   ================== MOBILE SIDE IMAGES ====================
+   ========================================================= */
 
+/* Hide on Desktop */
 
-/* HIDE MOBILE IMAGES ON DESKTOP */
 .mobile-side-images {
   display: none;
 }
 
-/* MOBILE VIEW */
+
+/* ===== MOBILE VIEW ===== */
+
 @media (max-width: 768px) {
 
-  /* SHOW MOBILE IMAGES ALWAYS */
   .mobile-side-images {
     display: block;
     position: relative;
@@ -389,22 +402,17 @@
   .mobile-left,
   .mobile-right {
     position: absolute;
-    top: -120px;   /* align near heading */
+    top: -120px;
     width: 75px;
   }
 
-  .mobile-left {
-    left: 40px;
-  }
+  .mobile-left { left: 10px; }
+  .mobile-right { right: 2px; }
 
-  .mobile-right {
-    right: 40px;
-  }
+  /* Hide old images */
 
-  /* HIDE TAB IMAGES (faculty ones) */
   .side-image {
     display: none !important;
   }
+
 }
-
-

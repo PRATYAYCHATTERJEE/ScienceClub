@@ -348,87 +348,101 @@ transition: transform 0.4s ease;
 
 
 
-/* ================= RESPONSIVE ================= */
+/* ================= MOBILE RESPONSIVE (EVENT TRACKER) ================= */
 
 @media(max-width:768px){
 
-.event-track{
-padding:80px 20px;
-}
+  /* ===== SECTION ===== */
+  .event-track{
+    padding:80px 20px;
+  }
 
-.timeline::before{
-left:20px;
-}
+  /* ===== CENTER TIMELINE LINE ===== */
+  .timeline::before,
+  .timeline-progress{
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-.timeline-progress{
-left:20px;
-}
+  /* ===== TIMELINE ITEM ===== */
+  .timeline-item{
+    position: relative;   /* 🔥 required for marker */
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 60px;
+  }
 
-.timeline-marker{
-left:20px;
-width:10px;
-height:10px;
-background:#8b5cf6;
-box-shadow:0 0 10px #8b5cf6;
-}
+  .timeline-item.left,
+  .timeline-item.right{
+    left: 0;
+    text-align: left;
+  }
 
-.timeline-item{
-width:100%;
-padding-left:60px;
-padding-right:10px;
-margin-bottom:40px;
-}
+  /* ===== MARKER (DOT AT TOP CENTER) ===== */
+  .timeline-marker{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
 
-.timeline-item.left,
-.timeline-item.right{
-left:0;
-text-align:left;
-}
+    width: 12px;
+    height: 12px;
+    background: #8b5cf6;
+    border-radius: 50%;
 
-.timeline-content{
-background:rgba(20,20,20,0.95);
-border-radius:16px;
-padding:20px;
-border:1px solid rgba(255,255,255,0.1);
-backdrop-filter:none;
-gap:10px;
-}
+    box-shadow:
+      0 0 10px #8b5cf6,
+      0 0 20px rgba(139,92,246,0.8);
+  }
 
-.timeline-content::before{
-display:none;
-}
+  /* ===== CARD ===== */
+  .timeline-content{
+    position: relative;
+    margin-top: 20px; /* space below dot */
 
-.timeline-content::after{
-opacity:0.15;
-}
+    background: rgba(20,20,20,0.95);
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: none;
+    gap: 10px;
+  }
 
-.timeline-content h3{
-font-size:18px;
-}
+  /* remove decorative arrows */
+  .timeline-content::before{
+    display: none;
+  }
 
-.timeline-date{
-font-size:13px;
-color:#9ca3af;
-}
+  .timeline-content::after{
+    opacity: 0.15;
+  }
 
-.timeline-desc{
-font-size:13px;
-line-height:1.5;
-color:#d1d5db;
-}
+  /* ===== TEXT ===== */
+  .timeline-content h3{
+    font-size: 18px;
+  }
 
-.learn-btn{
-padding:8px 18px;
-font-size:12px;
-}
+  .timeline-date{
+    font-size: 13px;
+    color: #9ca3af;
+  }
 
-.rocket-container{
-display:none;
-}
+  /* 🔥 HIDE DESCRIPTION */
+  .timeline-desc{
+    display: none;
+  }
 
-.planet{
-display:none;
-}
+  /* ===== BUTTON ===== */
+  .learn-btn{
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  /* ===== REMOVE EXTRA DECORATIONS ===== */
+  .rocket-container,
+  .planet{
+    display: none;
+  }
 
 }
 

@@ -259,3 +259,81 @@ justify-content:center;
 }
 
 }
+
+
+/* ================= FINAL HERO MOBILE OVERRIDE ================= */
+
+@media(max-width:768px){
+
+  /* 🔥 FORCE RESET EVERYTHING */
+  .hero-center{
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 🔥 HERO FIX */
+  .hero{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+
+    background-position: 65% center;
+    background-size: cover;
+  }
+
+  /* 🔥 TEXT FIX */
+  .big-text{
+    font-size: clamp(46px, 11vw, 60px);
+    font-weight: 900;
+    line-height: 1.1;
+  }
+
+  /* 🔥 SUB TEXT */
+  .hero-sub{
+    justify-content: center;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  /* 🔥 DESCRIPTION */
+  .hero-desc{
+    max-width: 320px;
+    margin: 12px auto;
+    font-size: 14px;
+  }
+
+  /* 🔥 BUTTON */
+  .hero-btn{
+    margin-top: 18px;
+  }
+
+  /* 🔥 SOCIAL */
+  .social-icons{
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .hero{
+    align-items: flex-start;   /* 🔥 move content upward */
+    padding-top: 150px;         /* control exact position */
+  }
+
+}

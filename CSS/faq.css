@@ -23,31 +23,27 @@
   z-index:0;
 }
 
+
 /* ================= TITLE ================= */
 
 .faq-title {
   font-family: 'Outfit', sans-serif;
   font-size: 48px;
   font-weight: 800;
-
   text-align: center;
   letter-spacing: 1px;
   line-height: 1.1;
-
-  color: #ffffff;   /* 🔥 remove gradient text */
-
+  color: #ffffff;
   margin-bottom: 40px;
   position: relative;
 }
+
 .faq-title::after {
   content: "";
   display: block;
-
   width: 80px;
   height: 4px;
-
   margin: 14px auto 0;
-
   background: linear-gradient(90deg, #0800ff, #ff00f2);
   border-radius: 4px;
 }
@@ -60,7 +56,8 @@
   font-size:16px;
 }
 
-/* ================= FAQ TOP (DESKTOP STRUCTURE) ================= */
+
+/* ================= FAQ TOP ================= */
 
 .faq-top{
   position:relative;
@@ -72,7 +69,8 @@
   margin:auto;
 }
 
-/* astronauts desktop */
+
+/* ================= ASTRONAUTS ================= */
 
 .faq-astro{
   position:absolute;
@@ -81,13 +79,9 @@
   z-index:0;
 }
 
-.faq-astro:first-child{
-  left:5%;
-}
+.faq-astro:first-child{ left:5%; }
+.faq-astro:last-child{ right:5%; }
 
-.faq-astro:last-child{
-  right:5%;
-}
 
 /* ================= CONTAINER ================= */
 
@@ -97,6 +91,7 @@
   position:relative;
   z-index:1;
 }
+
 
 /* ================= FAQ CARD ================= */
 
@@ -141,6 +136,7 @@
   0 0 40px rgba(99,102,241,0.15);
 }
 
+
 /* ================= QUESTION ================= */
 
 .faq-question{
@@ -149,31 +145,39 @@
   align-items:center;
   padding:24px;
   cursor:pointer;
+  width:100%;
 }
 
 .faq-question h3{
   font-size:20px;
   color:#e5e7eb;
+  flex:1;                     /* 🔥 FIX TEXT WIDTH */
+  margin-right:10px;          /* 🔥 spacing from arrow */
+  word-break:normal;
+  overflow-wrap:break-word;
 }
 
 .faq-item.active .faq-question h3{
   color:#fff;
 }
 
+
 /* ================= ARROW ================= */
 
 .faq-arrow{
-  width:12px;
-  height:12px;
+  width:10px;                 /* 🔥 bigger */
+  height:10px;
   border-right:2px solid #8b5cf6;
   border-bottom:2px solid #8b5cf6;
   transform:rotate(45deg);
   transition:0.3s;
+  flex-shrink:0;
 }
 
 .faq-item.active .faq-arrow{
   transform:rotate(-135deg);
 }
+
 
 /* ================= ANSWER ================= */
 
@@ -189,59 +193,41 @@
   color:#94a3b8;
 }
 
-.faq-question{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:24px;
-  cursor:pointer;
-  width:100%;
-}
 
-/* ================= PLANETS ================= */
-
-.faq-planet{
-  position:absolute;
-  opacity:0.35;
-  z-index:0;
-}
-
-.planet1{ left:5%; top:30%; }
-.planet2{ right:10%; top:15%; }
 
 /* ================= MOBILE FIX ================= */
 
 @media (max-width:600px){
 
   .faq-section{
-    padding:80px 5%;
+    padding:60px 5%;
   }
 
   .faq-title{
     font-size:38px;
+    margin-bottom:10px;
   }
 
   .faq-subtitle{
     font-size:13px;
-    margin-bottom:30px;
+    margin-bottom:20px;
+    line-height:1.5;
   }
 
-  /* hide planets */
-  .faq-planet{
+  
+
+  .faq-astro{
     display:none !important;
+    margin:0;
+    padding:0;
   }
 
-  /* MOBILE LAYOUT */
   .faq-top{
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    gap:10px;
-  }
-
-  .faq-astro{
-    position:static !important;
-    width:100px;
+    justify-content:center;
+    gap:5px;
+    margin-bottom:10px;
   }
 
   .faq-center{
@@ -249,34 +235,38 @@
     text-align:center;
   }
 
+  .faq-container{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  /* 🔥 FIX DOUBLE GAP */
+  .faq-item{
+    margin-bottom:0;
+  }
+
 }
+
+
 /* ================= DESKTOP SIDE ALIGN FIX ================= */
 
 @media (min-width:768px){
 
   .faq-top{
-    position:static; /* remove top layout effect */
+    position:static;
     margin-bottom:0;
   }
 
-  /* move astronauts beside FAQ container */
   .faq-astro{
     position:absolute;
-    top:60%; /* 🔥 main control (adjust if needed) */
+    top:60%;
     transform:translateY(-50%);
     width:190px;
     z-index:0;
   }
 
-  .faq-astro:first-child{
-    left:2%;
-  }
-
-  .faq-astro:last-child{
-    right:2%;
-  }
+  .faq-astro:first-child{ left:2%; }
+  .faq-astro:last-child{ right:2%; }
 
 }
-
-
-
