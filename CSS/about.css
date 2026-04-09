@@ -247,7 +247,7 @@
   .stats-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-    margin-top: 25px;
+    margin-top: 10px;
   }
 
   .stat-card {
@@ -263,7 +263,24 @@
     font-size: 11px;
   }
 }
+@media (max-width: 768px) {
+  .about-title {
+    line-height: 1.2;
+  }
 
+  .about-title::after {
+    content: "";
+  }
+
+  .about-title {
+    display: block;
+  }
+
+  /* Force 2-line break */
+  .about-title br {
+    display: inline;
+  }
+}
 
 
 /* BODY TEXT */

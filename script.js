@@ -113,12 +113,33 @@ window.addEventListener("load", () => {
   /* =========================
      MOBILE NAVBAR
   ========================== */
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
 
-hamburger.onclick = () => {
-  navMenu.classList.toggle("show");
-};
+// Toggle menu
+hamburger.addEventListener("click", (e) => {
+  e.stopPropagation(); // 🔥 prevent immediate close
+  navLinks.classList.toggle("show");
+});
+
+// ✅ Close when clicking anywhere
+document.addEventListener("click", () => {
+  navLinks.classList.remove("show");
+});
+
+// ✅ Prevent closing when clicking inside menu
+navLinks.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+// ✅ Close when clicking any link
+const links = document.querySelectorAll(".nav-links a");
+
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
+});
   /* =========================
      EVENT DROPDOWN
   ========================== */
@@ -566,7 +587,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+const faqs = document.querySelectorAll(".faq-item");
 
+faqs.forEach(faq => {
+  faq.addEventListener("click", () => {
+    faq.classList.toggle("active");
+  });
+});
 
 
  /* =========================

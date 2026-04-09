@@ -142,65 +142,91 @@ body {
 }
 
 
-/* ================= MOBILE NAVBAR (<=768px) ================= */
 @media (max-width: 768px) {
 
-  /* 🔥 FIXED FLOATING NAVBAR (BALANCED POSITION) */
+  /* Navbar */
   .navbar {
     position: fixed;
-    top: 10px;                /* 🔥 FIXED (was 30px too much) */
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
-
-    width: 92%;
-    max-width: 620px;
-
-    margin: 0;
-    padding: 0;
-
+    width: 94%;
     z-index: 999;
   }
 
-  /* 🔥 THICKNESS FIX */
   .nav-container {
-    padding: 12px 12px;        /* 🔥 reduced height */
-    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 14px;
+    border-radius: 14px;
+    position: relative;
   }
 
-  /* LOGO */
-  .logo img {
-    width: 30px;              /* slightly smaller */
-  }
-
-  .logo h2 {
-    font-size: 18px;
-  }
-
-  /* CONTROLS */
-  .nav-controls {
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
     gap: 8px;
   }
 
+  .logo img {
+    width: 28px;
+  }
+
+  .logo h2 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  /* Controls (right side) */
+  .nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
   .music-btn {
-    width: 37px;
-    height: 37px;
+    width: 34px;
+    height: 34px;
     font-size: 13px;
     border-radius: 10px;
   }
 
   .hamburger {
+    display: block;
     font-size: 22px;
+    cursor: pointer;
   }
 
-  /* NAV LINKS (hidden by default) */
+  /* 🔥 HIDE MENU BY DEFAULT */
   .nav-links {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    max-width: 260px;
+
+    background: rgba(20, 0, 40, 0.95);
+    backdrop-filter: blur(12px);
+
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 12px;
+
     display: none;
+    text-align: center;
+    z-index: 1000;
   }
 
-  /* REMOVE EXTRA GAP */
-  body {
-    padding-top: 0;
+  /* SHOW WHEN ACTIVE */
+  .nav-links.show {
+    display: flex;
   }
+
 }
 
 /* Smooth premium animation */

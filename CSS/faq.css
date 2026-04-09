@@ -270,3 +270,19 @@
   .faq-astro:last-child{ right:2%; }
 
 }
+
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px; /* adjust if needed */
+}
+
+/* Rotate arrow */
+.faq-item.active .arrow {
+  transform: rotate(180deg);
+}
