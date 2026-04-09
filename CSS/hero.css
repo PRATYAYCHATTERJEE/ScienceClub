@@ -115,27 +115,30 @@ text-shadow:0 0 8px rgba(0,0,0,0.7);
 /* ================= BUTTON ================= */
 
 .hero-btn-main{
-margin-top:22px;
-padding:12px 28px;
-border:none;
-border-radius:30px;
+  display: inline-block;   /* 🔥 important for <a> */
+  text-decoration: none;   /* remove underline */
 
-background:linear-gradient(135deg,#90a4ae,#b0bec5);
-color:#000;
+  margin-top:22px;
+  padding:12px 28px;
+  border:none;
+  border-radius:30px;
 
-font-weight:700;
-font-size:14px;
+  background:linear-gradient(135deg,#90a4ae,#b0bec5);
+  color:#060000;
 
-cursor:pointer;
-transition:0.3s;
+  font-weight:700;
+  font-size:14px;
 
-box-shadow:
-0 6px 20px rgba(0,0,0,0.4),
-0 0 10px rgba(176,190,197,0.3);
+  cursor:pointer;
+  transition:0.3s;
+
+  box-shadow:
+  0 6px 20px rgba(0,0,0,0.4),
+  0 0 10px rgba(176,190,197,0.3);
 }
 
 .hero-btn-main:hover{
-transform:translateY(-4px) scale(1.03);
+  transform:translateY(-4px) scale(1.03);
 }
 
 /* ================= FOLLOW ================= */
@@ -337,3 +340,17 @@ justify-content:center;
   }
 
 }
+
+a {
+  text-decoration: none;
+}
+
+.explore-btn a {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+
+
+
+
