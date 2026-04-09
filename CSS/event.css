@@ -1,7 +1,7 @@
 /* ================= EVENTS SECTION ================= */
 
 .events-section {
-  padding: 100px 10%;
+  padding: 160px 10%;
   background: #000;
   color: white;
 }
@@ -236,8 +236,13 @@
 
   /* Section Padding (fix edge cutting) */
   .events-section {
-    padding: 0 16px;
+    padding: 0 26px;
   }
+
+.events-section {
+  margin-top: 0;        /* 🔥 important */
+  padding-top: 70px;    /* adjust spacing manually */
+}
 
   /* Container Layout */
   .events-container {

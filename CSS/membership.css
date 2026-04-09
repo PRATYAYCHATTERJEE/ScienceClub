@@ -293,6 +293,11 @@
   }
 
 }
+@media (max-width: 600px) {
+  .membership-features {
+    display: none;
+  }
+}
 
 /* ================= SPACE DOOR ANIMATION ================= */
 
@@ -340,63 +345,7 @@ transform:scale(1);
 }  
 
 
-/* ================= FLOATING PLANETS ================= */
 
-.membership-section {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Base planet style */
-.planet {
-  position: absolute;
-  width: 80px;
-  opacity: 0.8;
-  z-index: 0;
-  animation: floatPlanet 6s ease-in-out infinite;
-}
-
-/* Different positions */
-.planet1 {
-  top: 10%;
-  left: 5%;
-  width: 70px;
-  animation-delay: 0s;
-}
-
-.planet2 {
-  top: 20%;
-  right: 8%;
-  width: 90px;
-  animation-delay: 2s;
-}
-
-.planet3 {
-  bottom: 15%;
-  left: 10%;
-  width: 60px;
-  animation-delay: 1s;
-}
-
-.planet4 {
-  bottom: 10%;
-  right: 12%;
-  width: 85px;
-  animation-delay: 3s;
-}
-
-/* Floating animation */
-@keyframes floatPlanet {
-  0% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(10deg);
-  }
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-}
 .membership-container {
   position: relative;
   z-index: 2;
@@ -405,16 +354,6 @@ transform:scale(1);
 .member-image {
   position: relative;
   z-index: 2;
-}
-
-.planet5 {
-  bottom: 3%;   /* push it down */
-  right: 4%;    /* keep it near right */
-  top: auto;    /* IMPORTANT: remove top */
-  
-  width: 100px;
-  opacity: 0.9;
-  animation-delay: 1.5s;
 }
 
 .member-card {

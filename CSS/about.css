@@ -241,6 +241,7 @@
   .about-description p {
     font-size: 14px;
     line-height: 1.6;
+   
   }
 
   /* STATS GRID */
@@ -253,6 +254,7 @@
   .stat-card {
     padding: 15px 8px;
     height: 100px;
+    
   }
 
   .stat-card h2 {
